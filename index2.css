@@ -1,0 +1,150 @@
+
+@keyframes slide {
+	
+  0% {
+    left: 0%;
+    top: 0%;
+	transform: rotate(0);
+  }
+  
+  25% {
+    left: 89%;
+    top:0%;
+  }
+  50% {
+    left: 89%;
+    top:80%;
+  }
+  75% {
+    left:0px;
+    top:80%;
+  }
+  100% {
+    left: 0%;
+    top:0%;
+	transform: rotate(-360deg);
+  }
+}
+
+.background {
+  background-color:#B8FB29;
+  position: absolute;
+  top:0px;
+  left:0px;
+  height: 100%;
+  width: 100%;
+}
+
+
+.ball {
+  
+  position: relative;
+  top: 0px;
+  left:0px; 
+  width: 150px;
+  height: 90px;
+  
+  background-size: cover; 
+  animation-name: spinning;
+}
+
+.ball:hover{
+	animation-play-state: paused;
+}
+
+.spin {
+  animation-name: spinning;
+  animation-duration:1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay:0s; 
+  animation-play-state: running;
+}
+
+.slide {
+  animation-name: slide;
+  animation-duration:10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay:0s; 
+  animation-play-state: running;
+  
+}
+
+@keyframes spinning {
+  0% { transform: rotate(0); }
+  100%   { transform: rotate(-360deg); }
+}
+
+.sidebar{
+	position:absolute;
+	right:0%;
+	top:30%;
+	width:1%;
+	height:25%;
+	cursor:pointer;
+	
+}
+
+.red{
+	background-color:red;
+	transition: 1s;
+	position:absolute;
+	right:0%;
+	top:30%;
+	width:1%;
+	height:6%;
+	cursor:pointer;
+}
+.red:hover {
+    width: 200px;
+}
+
+.blue{
+	background-color:blue;
+	transition: 1s;
+	position:absolute;
+	right:0%;
+	top:36%;
+	width:1%;
+	height:6%;
+	cursor:pointer;
+}
+.blue:hover {
+    width: 200px;
+}
+
+.yellow{
+	background-color:yellow;
+	transition: 1s;
+	position:absolute;
+	right:0%;
+	top:42%;
+	width:1%;
+	height:6%;
+	cursor:pointer;
+}
+.yellow:hover {
+    width: 200px;
+}
+
+.green{
+	background-color:green;
+	transition: 1s;
+	position:absolute;
+	right:0%;
+	top:48%;
+	width:1%;
+	height:6%;
+	cursor:pointer;
+}
+.green:hover {
+    width: 200px;
+}
+
+.paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}

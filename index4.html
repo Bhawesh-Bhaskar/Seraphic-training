@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Animation
+</title>
+
+<link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body bgColor = "#B8FB29">
+  
+<div class="ball slide" id="element"></div>  
+<button id="toggle-animation" style="border-radius:2px;margin-left:45%;margin-top:15%;">Click Here</button>
+
+
+<table>
+<tr>
+<div onclick="myFunction()" class="red">R</div>
+</tr>
+<tr>
+<div onclick="myFunction1()" class="blue">B</div>
+</tr>
+<tr>
+<div onclick="myFunction2()" class="yellow">Y</div>
+</tr>
+<tr>
+<div onclick="myFunction3()" class="green">G</div>
+</tr>
+</table>
+
+
+
+
+<script>
+var button = document.getElementById('toggle-animation'),
+    el = document.getElementById('element');
+
+button.onclick = function(){
+  el.classList.toggle('paused');
+}
+</script>
+
+<script>
+function myFunction() {
+    document.body.style.backgroundColor = "red";
+}
+function myFunction1() {
+    document.body.style.backgroundColor = "blue";
+}
+function myFunction2() {
+    document.body.style.backgroundColor = "yellow";
+}
+function myFunction3() {
+    document.body.style.backgroundColor = "green";
+}
+</script>
+      
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Play and Stop CSS Animation</title>
+<style type="text/css">
+.animated {
+    height: 200px;
+    margin: 10px 0;
+    background: url("football.png") no-repeat left center #e4eacf;  
+    -webkit-animation: test 4s infinite; /* Chrome, Safari, Opera */
+    animation: test 4s infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes test {
+    50% {background-position: right center;}
+}
+/* Standard syntax */
+@keyframes test {
+    50% {background-position: right center;}
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".play-animation").click(function(){
+            $(".animated").css("animation-play-state", "running");
+        });
+        $(".stop-animation").click(function(){
+            $(".animated").css("animation-play-state", "paused");
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="animated"></div>
+    <button type="button" class="play-animation">Play Animation</button>
+    <button type="button" class="stop-animation">Stop Animation</button>
+    <p><strong>Warning:</strong> CSS Animations do not work in Internet Explorer 9 and earlier versions.</p>
+</body>
+</html>
